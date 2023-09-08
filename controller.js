@@ -22,7 +22,10 @@ const getUser = async function (req, res) {
         slack_name && users.track === track
   );
 
-  user.current_day = daysOfWeek[new Date().getDay()];
+  user.current_day = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+  });
+
   user.utc_time = new Date().toISOString().slice(0, -5) + "Z";
 
   res.status(200).send(user);
