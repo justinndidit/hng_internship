@@ -1,17 +1,7 @@
-const daysOfWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
 module.exports = [
   {
     slack_name: "Olasoji Favour",
-    current_day: daysOfWeek[new Date().getDay()],
+    current_day: new Date().toLocaleString("en-US", { weekday: "long" }),
     utc_time: 2020,
     track: "backend",
     github_file_url:
