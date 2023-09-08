@@ -4,7 +4,7 @@ const getUser = async function (req, res) {
   const { slack_name, track } = req.query;
 
   if (!slack_name || !track) {
-    return res.status(200).json(Data);
+    return res.status(200).send(Data);
   }
 
   const user = Data.find(
@@ -13,7 +13,7 @@ const getUser = async function (req, res) {
         slack_name && users.track === track
   );
 
-  res.status(200).json(user);
+  res.status(200).send(user);
 };
 
 module.exports = {

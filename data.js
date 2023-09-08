@@ -1,8 +1,11 @@
+const currentDay = new Date().toLocaleString("en-US", { weekday: "long" });
+const currentTime = new Date().toISOString().slice(0, -5) + "Z";
+
 module.exports = [
   {
     slack_name: "Olasoji Favour",
-    current_day: new Date().toLocaleString("en-US", { weekday: "long" }),
-    utc_time: new Date().toISOString().slice(0, -5) + "Z",
+    current_day: currentDay,
+    utc_time: currentTime,
     track: "backend",
     github_file_url:
       "https://github.com/justinndidit/hng_internship/blob/main/server.js",
