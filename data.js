@@ -1,7 +1,17 @@
+const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
 module.exports = [
   {
     slack_name: "Olasoji Favour",
-    current_day: "Thursday",
+    current_day: daysOfWeek[new Date().getDay()],
     utc_time: 2020,
     track: "backend",
     github_file_url:
